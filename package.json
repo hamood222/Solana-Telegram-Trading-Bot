@@ -1,4 +1,5 @@
 {
+  "author": "https://t.me/magicsolwiz",
   "scripts": {
     "start": "ts-node index.ts",
     "test": "nodemon --exec ts-node index.ts",

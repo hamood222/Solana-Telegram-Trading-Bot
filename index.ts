@@ -28,7 +28,7 @@ import { createLimitSellOrder } from './controllers/sell';
 import { getAssociatedTokenAddress } from '@solana/spl-token';
 import { generateSettingCommands } from './commands/setting';
 import { getSettingKeyboard } from './keyboards/setting';
-import BotRouter from './routes/BotRoute';
+
 import { snipeClick } from './messages/snipe';
 import { getSnipeKeyBoard } from './keyboards/snipe';
 
@@ -67,9 +67,6 @@ app.use(cors(corsOptions));
 app.get('/', (req: Request, res: Response) => {
   res.json("running api-valaichat.shicat.xyz");
 });
-
-
-app.use('/bot', BotRouter);
 
 bot.on('message', async (msg: Message) => {
   const chatId = msg.chat.id;
